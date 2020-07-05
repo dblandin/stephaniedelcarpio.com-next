@@ -7,7 +7,6 @@
   "author": "kendallstrautman",
   "scripts": {
     "dev": "next",
-    "develop": "yarn dev",
     "build": "next build",
     "start": "next start"
   },
