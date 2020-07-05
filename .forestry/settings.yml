@@ -11,13 +11,14 @@ sections:
   match: "**/*"
   templates:
   - work
-upload_dir: uploads
-public_path: "/uploads"
-front_matter_path: ''
+upload_dir: public/static
+public_path: ""
+front_matter_path: ""
 use_front_matter_path: false
 file_template: ":filename:"
 build:
   install_dependencies_command: yarn install
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
+  working_dir: "/srv"
   instant_preview_command: yarn dev
