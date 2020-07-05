@@ -14,26 +14,25 @@ const WorksList = ({ works }) => {
   return (
     <>
       <ul className="list">
-        {works.length > 1 &&
-          works.map((post, index) => (
-            <li key={index}>
-              <div className="hero_image">
-                <img
-                  src={post.frontmatter.image}
-                  alt={post.frontmatter.image}
+        {works.map((post, index) => (
+          <li key={index}>
+            <div className="hero_image">
+              <img
+                src={post.frontmatter.image}
+                alt={post.frontmatter.image}
+              />
+            </div>
+            <div className="blog__info">
+              <h2>{post.frontmatter.title}</h2>
+              {/* <h3> {reformatDate(post.frontmatter.date)}</h3> */}
+              <p>
+                <ReactMarkdown
+                  source={truncateSummary(post.markdownBody)}
                 />
-              </div>
-              <div className="blog__info">
-                <h2>{post.frontmatter.title}</h2>
-                {/* <h3> {reformatDate(post.frontmatter.date)}</h3> */}
-                <p>
-                  <ReactMarkdown
-                    source={truncateSummary(post.markdownBody)}
-                  />
-                </p>
-              </div>
-            </li>
-          ))}
+              </p>
+            </div>
+          </li>
+        ))}
       </ul>
       <style jsx>
         {`
