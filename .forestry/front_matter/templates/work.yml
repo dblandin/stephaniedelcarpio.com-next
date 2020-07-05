@@ -1,0 +1,10 @@
+---
+label: Work
+hide_body: false
+fields:
+- type: file
+  name: image
+  label: image
+- type: text
+  name: title
+  label: title
